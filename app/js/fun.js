@@ -154,16 +154,16 @@ function massraund(n,x){ /*раунд боя с несколькими прот�
             let uron=d_d(n[i].damage_dice)+n[i].mod_damage;
             console.log('Снесено ',uron,' хитов');
             if(s[p].hp>0 && s[p].hp>=(2*s[p].full_hp/3)){
-                document.write('<p>Хитрый удар!</p>'); 
+                document.write('<p>',n[i].character_name,' наносит по ',s[p].character_name,' хитрый удар!</p>'); 
             }
             else if(s[p].hp>0 && s[p].hp<(2*s[p].full_hp/3) && s[p].hp>=s[p].full_hp/3){
-                document.write('<p>Ловкий удар!</p>');
+                document.write('<p>',n[i].character_name,' наносит по ',s[p].character_name,' ловкий удар!</p>');
                 }
                 else if(s[p].hp>0 && s[p].hp<s[p].full_hp/3 && s[p].hp>uron){
-                    document.write('<p>Всем ударам удар!</p>');
+                    document.write('<p>',n[i].character_name,' наносит по ',s[p].character_name,' всем ударам удар!</p>');
                     }
                     else if(s[p].hp>0 && s[p].hp<=uron){
-                        document.write('<p>Добивающий удар!</p>');
+                        document.write('<p>',n[i].character_name,' наносит по ',s[p].character_name,' добивающий удар!</p>');
                     };
                 s[p].hp-=uron;
                 console.log('У врага осталось:',s[p].hp);
