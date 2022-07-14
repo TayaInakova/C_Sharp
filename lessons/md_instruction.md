@@ -35,7 +35,7 @@
 ![Здесь должна быть я... =)](TayaInakova.jfif)
 
 ## Ссылки
-fffffffffffffffffff
+
 ## Таблицы
 
 ## Цитаты
