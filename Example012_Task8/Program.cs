@@ -1,19 +1,19 @@
-﻿//void Even(double N)
-//{
-//    int[] numbers = {?};
-//int i=0;
-//int max=numbers[0];
-//
-//while (i<numbers.Length)
-//{
-//    if (numbers[i] > max)
-//    {
-//        max = numbers[i];
-//    };
-//    i++;
-//};
-//
-//    Console.Write("max = ");
-//    Console.WriteLine(max);
-//};
-//Even(90,5); ДОДЕЛАТЬ!
+﻿void EvenToN(double N)
+{
+    int i = 1;
+    string mass = (">>> ");
+
+    while (i < N)
+    {
+        int ost = i % 2;
+        if (ost == 0)
+        {
+            mass += $" {i}";
+        }
+        i++;
+    };
+    Console.WriteLine(mass);};
+
+
+EvenToN(10.5);
+EvenToN(14);
