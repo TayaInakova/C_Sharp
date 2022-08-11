@@ -1,11 +1,28 @@
-﻿void Square(double s)
+﻿// По двум заданным числам проверять является ли первое квадратом второго.
+
+void Sqr(int a, int b)
 {
-double q = s * s;
-Console.WriteLine(q);
+    int c = a / b;
+    if (c == b)
+    {
+        Console.WriteLine($">>> Число {a} является квадратом числа {b}");
+    }
+    else
+    {
+        Console.WriteLine($">>> Число {a} не является квадратом числа {b}");
+    };
 };
 
+int q = new Random().Next(1,1000);
+int z = new Random().Next(1,1000);
+Console.WriteLine(q);
+Console.WriteLine(z);
 
-double a = new Random().Next(1, 1000);
-Console.WriteLine(a);
+Sqr(q, z);
 
-Square(a);
+int n1 = 25;
+int n2 = 5;
+Console.WriteLine(n1);
+Console.WriteLine(n2);
+
+Sqr(n1, n2);

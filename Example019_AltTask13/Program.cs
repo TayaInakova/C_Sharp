@@ -5,8 +5,7 @@
         Console.WriteLine($">>> {thirdNum[2]}");
     };
 
-int n = new Random().Next(-10000, 10000);
-n = Convert.ToString(n);
+string n = "2645689";
 Console.WriteLine(n);
 
 ThirdNumber(n);

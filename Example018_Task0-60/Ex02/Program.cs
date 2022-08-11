@@ -1,26 +1,21 @@
-﻿void Sqr(int a, int b)
+﻿//Даны два числа. Показать большее и меньшее число.
+
+void Comparison(int a, int b)
 {
-    int c = a / b;
-    if (c == b)
+    if (a > b)
     {
-        Console.WriteLine($">>> Число {a} является квадратом числа {b}");
+        Console.WriteLine($">>> {a} - большее число, {b} - меньшее число");
     }
     else
     {
-        Console.WriteLine($">>> Число {a} не является квадратом числа {b}");
-    };
+        Console.WriteLine($">>> {b} - большее число, {a} - меньшее число");
+    }
 };
 
-int q = new Random().Next(1,1000);
-int z = new Random().Next(1,1000);
-Console.WriteLine(q);
-Console.WriteLine(z);
+int s = new Random().Next(1,1000);
+int r = new Random().Next(1,1000);
+Console.WriteLine(s);
+Console.WriteLine(r);
 
-Sqr(q, z);
 
-int n1 = 25;
-int n2 = 5;
-Console.WriteLine(n1);
-Console.WriteLine(n2);
-
-Sqr(n1, n2);
+Comparison(s, r);
