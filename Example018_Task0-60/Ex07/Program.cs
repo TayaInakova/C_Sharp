@@ -2,18 +2,21 @@
 
 void Interval(int n)
 {
-    int v = (n * 2)+1;
+    Console.WriteLine(n);
+    int v = (Math.Abs(n) * 2)+1;
+    Console.WriteLine(v);
     int[] num = new int[v];
-    int i = 0, y = 0;
+    if (n > 0)
+    {
+        n *= -1;
+    };
+    int i = 0;
     while (i < num.Length)
     {
-        num[i] = n - y;
+        num[i] = n + i;
+        Console.Write($"{num[i]} ");
         i++;
-        y++;
     };
-    Console.WriteLine($">>> {num}");
-
 };
-
-int z = new Random().Next(1, 10);
+int z = new Random().Next(-10, 10);
 Interval(z);

@@ -1,11 +1,22 @@
-﻿void ThirdNumber(string number)
+﻿void ThirdNumber(int number)
 {
-     char[] thirdNum = number.ToCharArray();
-     
+    if (number < 0)
+    {
+        number *= -1;
+    }
+    string num = Convert.ToString(number);
+    char[] thirdNum = num.ToCharArray();
+    if (thirdNum.Length < 3)
+    {
+         Console.WriteLine($">>> Заданное число не имеет третьей цифры");
+    }
+    else
+    {
         Console.WriteLine($">>> {thirdNum[2]}");
     };
+};
 
-string n = "2645689";
+int n = new Random().Next(-1000, 1000);
 Console.WriteLine(n);
 
 ThirdNumber(n);
