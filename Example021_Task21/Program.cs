@@ -1,38 +1,38 @@
 ﻿double DistanceBetweenPoints()
 {
-void Point(int[] point)
-{
-    void FillArray(int[] arr)
-
+    void Point(int[] point)
     {
-        int length = arr.Length;
-        int i = 0;
-        while (i < length)
-        {
-            arr[i] = new Random().Next(1, 20);
-            i++;
-        }
-    };
-    void PrintArray(int[] array)
-    {
-        int count = array.Length;
-        int j = 0;
-        while (j < count)
-        {
-            Console.WriteLine(array[j]);
-            j++;
-        }
-    };
+        void FillArray(int[] arr)
 
-    FillArray(point);
-    PrintArray(point);
-    Console.WriteLine();
-};
+        {
+            int length = arr.Length;
+            int i = 0;
+            while (i < length)
+            {
+                arr[i] = new Random().Next(1, 20);
+                i++;
+            }
+        };
+        void PrintArray(int[] array)
+        {
+            int count = array.Length;
+            int j = 0;
+            while (j < count)
+            {
+                Console.WriteLine(array[j]);
+                j++;
+            }
+        };
+
+        FillArray(point);
+        PrintArray(point);
+        Console.WriteLine();
+    };
     int[] firstN = new int[3];
     int[] secondN = new int[3];
-    
+
     Console.WriteLine("Даны координаты первой точки:");
-Point(firstN);
+    Point(firstN);
 
     Console.WriteLine("Даны координаты второй точки:");
     Point(secondN);
