@@ -19,9 +19,10 @@
             int j = 0;
             while (j < count)
             {
-                Console.WriteLine(array[j]);
+                Console.Write($"{array[j]} ");
                 j++;
             }
+            Console.WriteLine();
         };
 
         FillArray(point);
