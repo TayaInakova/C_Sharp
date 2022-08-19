@@ -50,7 +50,8 @@ int[] s3 = SumMatrix(s1, s2);
 Умножение одномерных матриц (строка-столбец) (итог - число)
 */
 
-/*  Полная хрень...
+/* Детали доработать напильником.
+
 int[,] CreateMatrix(int x, int y)
 {
     int[,] matrix = new int[x, y];
@@ -58,21 +59,21 @@ int[,] CreateMatrix(int x, int y)
     {
         for (int j = 0; j < y; j++) //y
         {
-            matrix[i, j] = new Random().Next(1, 20);
+            matrix[i, j] = new Random().Next(1, 5);
         };
     };
     return matrix;
 };
 
-int[,] a1 = CreateMatrix(3, 1);
-int[,] a2 = CreateMatrix(1, 3);
+int[,] a1 = CreateMatrix(1, 3);
+int[,] a2 = CreateMatrix(3, 1);
 
 int Multiply(int[,] m1, int[,] m2)
 {
     int m3 = 0;
-    for (int i = 0; i < m1.Length; i++)
+    for (int i = 0, j = 0; i < m1.Length; i++)
     {
-        m3 += m1[i, 1] + m2[1, i];
+        m3 += m1[j, i] * m2[i, j];
     };
     Console.Write($"{m3}");
     return m3;

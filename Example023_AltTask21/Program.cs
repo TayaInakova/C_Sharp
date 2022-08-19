@@ -16,7 +16,7 @@ double DistanceBetweenPoints()
         Console.WriteLine("Ведите координаты через запятую:");
         string? t = Console.ReadLine();
         t = t.Replace(" ", "");
-        string[] tt = t.Split(",");
+        string[]? tt = t.Split(",");
         int[] u = new int[tt.Length];
         for (int i = 0; i < tt.Length; i++)
         {
