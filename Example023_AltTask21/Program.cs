@@ -5,15 +5,15 @@ double DistanceBetweenPoints()
     int D()
     {
         Console.WriteLine("Введите число мерности пространства:");
-        string? dd = Console.ReadLine();
-        int d = Convert.ToInt32(dd);
+        int d = Convert.ToInt32(Console.ReadLine());
         return d;
     };
     int space = D();
-    
+
 
     int[] PointCoordinate()
     {
+        Console.WriteLine("Ведите координаты через запятую:");
         string? t = Console.ReadLine();
         t = t.Replace(" ", "");
         string[] tt = t.Split(",");
@@ -24,7 +24,7 @@ double DistanceBetweenPoints()
         };
         return u;
     };
-    Console.WriteLine("Введите через запятую координаты первой точки:");
+    Console.WriteLine("Для первой точки:");
 
     int[] point1 = PointCoordinate();
     if (point1.Length != space)
@@ -34,7 +34,7 @@ double DistanceBetweenPoints()
     };
 
     Console.WriteLine("Введите через запятую координаты второй точки:");
-    
+
     int[] point2 = PointCoordinate();
     if (point2.Length != space)
     {
