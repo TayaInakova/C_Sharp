@@ -15,7 +15,10 @@ double DistanceBetweenPoints()
     {
         Console.WriteLine("Ведите координаты через запятую:");
         string? t = Console.ReadLine();
-        t = t.Replace(" ", "");
+        t = t!.Replace(" ", "");
+        t = t!.Replace(".", "");
+        t = t!.Replace(";", "");
+        t = t!.Replace("/", "");
         string[]? tt = t.Split(",");
         int[] u = new int[tt.Length];
         for (int i = 0; i < tt.Length; i++)
@@ -27,16 +30,16 @@ double DistanceBetweenPoints()
     Console.WriteLine("Для первой точки:");
 
     int[] point1 = PointCoordinate();
-    if (point1.Length != space)
+    while (point1.Length != space)
     {
         Console.WriteLine("Число координат должно соответствовать мерности пространства, в котором находится точка. Повторите ввод:");
         point1 = PointCoordinate();
     };
 
-    Console.WriteLine("Введите через запятую координаты второй точки:");
+    Console.WriteLine("Для второй точки:");
 
     int[] point2 = PointCoordinate();
-    if (point2.Length != space)
+    while (point2.Length != space)
     {
         Console.WriteLine("Число координат должно соответствовать мерности пространства, в котором находится точка. Повторите ввод:");
         point2 = PointCoordinate();
