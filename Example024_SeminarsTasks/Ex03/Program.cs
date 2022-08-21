@@ -17,7 +17,8 @@ int[] Bin(int n)
     Console.WriteLine();
     return a;
 };
-int[] firstStep = Bin(5);
+int a1 = new Random().Next(1,10);
+int[] firstStep = Bin(a1);
 // */
 
 /*
