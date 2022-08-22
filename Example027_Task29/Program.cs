@@ -5,7 +5,7 @@ void Arr()
     Console.Write("[");
     for (int i = 0; i < matrix.Length; i++)
     {
-        matrix[i] = new Random().Next(1, 100);
+        matrix[i] = new Random().Next(1, 101);
         Console.Write($"{matrix[i]}");
         if (i < matrix.Length - 1)
         {
