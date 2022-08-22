@@ -4,7 +4,6 @@
 Написать метод, который генерирует массив 0 и 1 заданного количества N.
 */
 
-// /*
 int[] Bin(int n)
 {
     Console.Write("Случайный массив '0' и '1': ");
@@ -19,7 +18,6 @@ int[] Bin(int n)
 };
 int a1 = new Random().Next(1,10);
 int[] firstStep = Bin(a1);
-// */
 
 /*
 Задача 2.
@@ -27,7 +25,6 @@ int[] firstStep = Bin(a1);
 и возвращающее десятичное представление числа.
 */
 
-// /*
 int Des(int[] b)
 {
     int d = 0;
@@ -40,7 +37,6 @@ int Des(int[] b)
 };
 int[] umbra = { 1, 1, 0, 1, 1, 0 };
 int secondStep = Des(firstStep);
-// */
 
 /*
 Задача 3.
@@ -49,7 +45,6 @@ int secondStep = Des(firstStep);
 (2 <= основание <= 9)
 */
 
-// /*
 int Transfer(int c, int e)
 {
     int g = 0;
@@ -81,4 +76,3 @@ int Transfer(int c, int e)
 int r = new Random().Next(2, 10);
 int ThirdStep = Transfer(secondStep, r);
 
-// */

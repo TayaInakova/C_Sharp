@@ -1,2 +1,18 @@
-﻿// See https://aka.ms/new-console-template for more information
-Console.WriteLine("Hello, World!");
+﻿
+void Arr()
+{
+    int[] matrix = new int[8];
+    Console.Write("[");
+    for (int i = 0; i < matrix.Length; i++)
+    {
+        matrix[i] = new Random().Next(1, 100);
+        Console.Write($"{matrix[i]}");
+        if (i < matrix.Length - 1)
+        {
+            Console.Write(",");
+        };
+    };
+    Console.WriteLine("]");
+};
+
+Arr();
