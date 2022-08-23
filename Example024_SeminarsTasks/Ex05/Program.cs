@@ -56,7 +56,7 @@ void FillDoubleMass(double[,] matrix)  //наполнение массива р�
     {
         for (int j = 0; j < columns; j++) //y
         {
-            matrix[i, j] = Math.Round(new Random().NextDouble(), 2);
+            matrix[i, j] = Math.Round(new Random().NextDouble() * 100, 2);
         }
     }
 };

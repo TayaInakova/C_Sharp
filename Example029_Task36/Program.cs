@@ -36,7 +36,7 @@ int SumElements(int[] arr)
             sumEl += arr[i];
         }
     };
-    Console.WriteLine(sumEl);
+    Console.WriteLine($"Сумма элементов на нечётных позициях: {sumEl}");
     return sumEl;
 }
 
@@ -44,7 +44,7 @@ int SumElements(int[] arr)
 void Start()
 {
     int[] a = CreateArray(8);
-    FillArray(a, 1, 100);
+    FillArray(a, -99, 100);
     PrintArray(a);
     int b = SumElements(a);
 }

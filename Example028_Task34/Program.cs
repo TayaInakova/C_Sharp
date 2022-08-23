@@ -1,61 +1,49 @@
 ﻿
-int[,] CreateArray(int m, int n)
+int[] CreateArray(int n)
 {
-    return new int[m, n]; ;
+    return new int[n]; ;
 };
 
 
-void FillArray(int[,] arr, int r, int f) //наполнение массива рандомными числами [r,f)
+void FillArray(int[] arr, int r, int f) //наполнение массива рандомными числами [r,f)
 {
-    int rows = arr.GetLength(0);
-    int columns = arr.GetLength(1);
-    for (int i = 0; i < rows; i++) //x
+    int size = arr.Length;
+    for (int i = 0; i < size; i++)
     {
-        for (int j = 0; j < columns; j++) //y
-        {
-            arr[i, j] = new Random().Next(r, f);
-        }
+        arr[i] = new Random().Next(r, f);
     }
 };
 
 
-void PrintArray(int[,] arr) // вывод массива на консоль
+void PrintArray(int[] arr) // вывод массива на консоль
 {
-    int rows = arr.GetLength(0);
-    int columns = arr.GetLength(1);
-    for (int i = 0; i < rows; i++) //x
+    int size = arr.Length;
+    for (int i = 0; i < size; i++)
     {
-        for (int j = 0; j < columns; j++) //y
-        {
-            Console.Write($"{arr[i, j]} ");
-        };
-        Console.WriteLine();
+        Console.Write($"{arr[i]} ");
     };
-}
+    Console.WriteLine();
+};
 
-int NumberOfEvenNumbers(int[,] arr)
+int NumberOfEvenNumbers(int[] arr)
 {
     int count = 0;
-    int rows = arr.GetLength(0);
-    int columns = arr.GetLength(1);
-    for (int i = 0; i < rows; i++) //x
+    int size = arr.Length;
+    for (int i = 0; i < size; i++)
     {
-        for (int j = 0; j < columns; j++) //y
+        if (arr[i] % 2 == 0)
         {
-            if (arr[i, j] % 2 == 0)
-            {
-                count++;
-            };
+            count++;
         };
     };
-    Console.WriteLine($"В данном массиве {count} чётных элементов.");
+    Console.WriteLine($"Количество чётных элементов: {count}");
     return count;
 
 };
 
 void Start()
 {
-    int[,] ar = CreateArray(1, 8);
+    int[] ar = CreateArray(8);
     FillArray(ar, 100, 1000);
     PrintArray(ar);
     int g = NumberOfEvenNumbers(ar);
