@@ -1,5 +1,5 @@
 ﻿
-int, int, int, int InitializingVariables(int a, int b, int c, int d)
+int[] InitializingVariables()
 {
     string? userTextData = Console.ReadLine();
     userTextData = userTextData!.Replace(" ", "");
@@ -7,11 +7,12 @@ int, int, int, int InitializingVariables(int a, int b, int c, int d)
     userTextData = userTextData!.Replace(";", "");
     userTextData = userTextData!.Replace("/", "");
     string[]? userTextDataArray = userTextData.Split(",");
-    a = Convert.ToInt32(userTextDataArray[0]);
-    b = Convert.ToInt32(userTextDataArray[1]);
-    c = Convert.ToInt32(userTextDataArray[2]);
-    d = Convert.ToInt32(userTextDataArray[3]);
-    return (a, b, c, d);
+    int[] userIntDataArray = new int[userTextDataArray.Length];
+    for (int i = 0; i < userTextDataArray.Length; i++)
+    {
+        userIntDataArray[i] = Convert.ToInt32(userTextDataArray[i]);
+    };
+    return userIntDataArray;
 };
 
 void Fill(int[,] array, int a, int b, int c, int d) //наполнение матрицы данными
@@ -32,24 +33,26 @@ void Start()
 {
     Console.WriteLine("Даны две прямые, заданные уравнениями y=k1*x+b1 и y=k2*x+b2."); // Приведём их к виду k1*x + с*y= -b1 и k2*x +с*y= -b2
     Console.WriteLine("Введите через запятую последовательно значения переменных k1, b1, k2, b2:");
-    int k1 = 0, k2 = 0, b1 = 0, b2 = 0;
+    int[] numbers = InitializingVariables();
     int c1 = -1, c2 = -1;
-    InitializingVariables(k1, b1, k2, b2);
-    System.Console.WriteLine($"{k1},{k2},{b1},{b2}");
+    int k1 = numbers[0];
+    int k2 = numbers[2];
+    int b1 = numbers[1];
+    int b2 = numbers[3];
     int[,] d = new int[2, 2];
     int[,] dx = new int[2, 2];
     int[,] dy = new int[2, 2];
     Fill(d, k1, c1, k2, c2);
-    Fill(dx, -b1, c1, -b2, c2);
-    Fill(dy, k1, b1, k2, b2);
+    Fill(dx, -1*b1, c1, -1*b2, c2);
+    Fill(dy, k1, -1*b1, k2, -1*b2);
     int dGeneral = Determinant(d);
     if (dGeneral != 0)
     {
-        int dOfx = Determinant(dx);
-        int dOfy = Determinant(dy);
-        int x = dOfx / dGeneral;
-        int y = dOfy / dGeneral;
-        Console.WriteLine("Точка пересечения заданных прямых имеет координаты: [{x},{y}]");
+        double dOfx = Determinant(dx);
+        double dOfy = Determinant(dy);
+        double x = Math.Round((dOfx / dGeneral),2);
+        double y = Math.Round((dOfy / dGeneral),2);
+        Console.WriteLine($"Точка пересечения заданных прямых имеет координаты: [{x};{y}]");
     }
     else
     {
