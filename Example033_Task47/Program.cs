@@ -1,9 +1,4 @@
-﻿double[,] CreateArray(int m, int n)
-{
-    return new double[m, n]; ;
-};
-
-void FillDoubleArray(double[,] array)
+﻿void FillDoubleArray(double[,] array)
 {
     int rows = array.GetLength(0);
     int columns = array.GetLength(1);
@@ -32,7 +27,7 @@ void PrintArray(double[,] arr)
 
 void Start()
 {
-    double[,] y = CreateArray(3, 4);
+    double[,] y = new double[3, 4];
     FillDoubleArray(y);
     PrintArray(y);
 };
