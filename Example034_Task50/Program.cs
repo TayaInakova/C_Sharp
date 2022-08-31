@@ -33,7 +33,7 @@ void Print(int[,] array)
 int FindByLocation(int[,] array, int x, int y)
 {
     int numberByLocation = 0;
-    if (x < array.GetLength(0) && y < array.GetLength(1))
+    if (x > 0 && x < array.GetLength(0) && y > 0 && y < array.GetLength(1))
     {
         numberByLocation = array[x - 1, y - 1];
         Console.WriteLine(numberByLocation);
@@ -48,7 +48,7 @@ int FindByLocation(int[,] array, int x, int y)
 void Start00()
 {
     int width = new Random().Next(5, 15);
-    int length = new Random().Next(5,15);
+    int length = new Random().Next(5, 15);
     int[,] table = new int[width, length];
     Fill(table, 1, 100);
     Print(table);
@@ -65,7 +65,7 @@ Console.WriteLine();
 
 void SearchByValue(int[,] array, int value)
 {
-    Console.WriteLine($"Поиск числа {value}");
+    Console.Write($"Поиск числа {value}: ");
     int rows = array.GetLength(0);
     int columns = array.GetLength(1);
     int count = 0;
@@ -75,7 +75,7 @@ void SearchByValue(int[,] array, int value)
         {
             if (array[i, j] == value)
             {
-                Console.WriteLine($"Число {value} находится на позиции [{i};{j}]");
+                Console.WriteLine($"число находится на позиции [{i};{j}]");
                 count++;
                 break;
             }
