@@ -25,28 +25,39 @@ void Print(int[,] array)
     };
 }
 
-int[,] SumInString(int[,] array)
+void SumInString(int[,] array)
 {
-    int sum = 0;
+    int smallerRow = 1;
     int rows = array.GetLength(0);
     int columns = array.GetLength(1);
-    int temporary = array[0, 0];
+    int temporary = 0;
+    int sum = 0;
+    for (int j = 0; j < columns; j++)
+    {
+        sum += array[0, j];
+    }
     for (int i = 0; i < rows; i++)
     {
         for (int j = 0; j < columns; j++)
         {
-           sum += array[i,j];
+            temporary += array[i, j];
         };
+        if (temporary < sum)
+        {
+            sum = temporary;
+            smallerRow = i + 1;
+        }
+        temporary = 0;
     };
-    return array;
+    Console.WriteLine($"Строка с наименьшей суммой элементов: {smallerRow}"); ;
 }
 
 void Start()
 {
-    int[,] originalArray = new int[5,8];
-    Fill(originalArray,1,10);
-    Print(originalArray);
-    SumInString(originalArray);
+    int[,] randomArray = new int[4, 3];
+    Fill(randomArray, 1, 10);
+    Print(randomArray);
+    SumInString(randomArray);
 }
 
 Start();
