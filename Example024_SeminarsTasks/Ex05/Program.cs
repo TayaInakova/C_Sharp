@@ -40,7 +40,7 @@ void Task01() // решение задачи 1
     Fill(u, 1, 10);
     Print(u);
 }
-//Task01();
+Task01();
 
 // 2.
 double[,] CreateMass(int m, int n) //создание массива определенной размерности
@@ -82,7 +82,7 @@ void Task02() // решение задачи 2
     PrintMass(y);
 };
 
-//Task02();
+Task02();
 
 
 
@@ -113,5 +113,5 @@ void Task03() // решение задачи 3
     tass = ConvertMass(tass);
     Print(tass);
 };
-//Task03();
+Task03();
 

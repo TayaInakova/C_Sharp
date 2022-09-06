@@ -36,7 +36,7 @@ void Print(int[,,] array)
 
 void Start()
 {
-    int[,,] tripleArray = new int[2, 2, 2];
+    int[,,] tripleArray = new int[3, 2, 4];
     FillDifferentValues(tripleArray, 10, 100);
     Print(tripleArray);
 }

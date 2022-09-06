@@ -2,10 +2,10 @@
 {
     result += m;
     Console.Write($"{result} ");
-    if (m != n) NumbersInBetween(result, m + 1, n);
+    if (m != n) SumNumbersInBetween(result, m + 1, n);
 };
 int sum = 0;
-NumbersInBetween(sum, 1, 15);
+SumNumbersInBetween(sum, 1, 15);
 Console.WriteLine();
 int temp = 0;
-NumbersInBetween(temp, 4, 8);
+SumNumbersInBetween(temp, 4, 8);
