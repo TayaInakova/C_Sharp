@@ -1,4 +1,6 @@
-﻿int AkkermanFunction(int m, int n)
+﻿// В функцию изначально приходят неотрицательные числа
+
+int AkkermanFunction(int m, int n)
 {
     if (m == 0)
     {
@@ -8,10 +10,9 @@
     {
         return AkkermanFunction(m - 1, 1);
     }
-    else if (m > 0 && n > 0)
+    else
     {
         return AkkermanFunction(m - 1, AkkermanFunction(m, n - 1));
     }
-    return AkkermanFunction(m, n);
 }
 System.Console.WriteLine(AkkermanFunction(3, 2));
